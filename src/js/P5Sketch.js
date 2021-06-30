@@ -370,8 +370,8 @@ const P5Sketch = () => {
         p.drawPentagons = (x, y, radius, level, opacity) => {
             const maxSize = (p.canvasWidth >= p.canvasHeight) ? p.canvasWidth : p.canvasheight;
             const startShapeSize = maxSize / 264;
-            let x = startShapeSize;
-            let opacity = 100;
+            x = startShapeSize;
+            opacity = 100;
             while (x < maxSize) {
                 p.stroke(255, 0, 0, opacity);
                 let fractalRoot = new FractalRoot(p, x);
@@ -388,7 +388,7 @@ const P5Sketch = () => {
                 if (parseInt(p.song.currentTime()) >= parseInt(p.song.buffer.duration)) {
                     p.reset();
                 }
-                document.getElementById("play-icon").classList.add("fade-out");
+                //document.getElementById("play-icon").classList.add("fade-out");
                 p.canvas.addClass('fade-in');
                 p.song.play();
             }
