@@ -10,20 +10,17 @@ export default class Pentagon {
      * https://openprocessing.org/sketch/955445/ 
      */
 
-    constructor(p, x, y) {
+    constructor(p, x, y, fill, stroke, includeSubSet) {
         this.p = p;
         this.x = x;
         this.y = y;
-        this.speed = 6;
-        this.size = p.width / 8;
-        this.growth = parseInt(p.random(3, 9));
-        this.edges = parseInt(p.random(16, 32));
-        this.seed =  p.random(1, 100);
-        this.fillHue = p.random(0, 360);
-        this.strokeHue = p.random(0, 360);
+        this.speed = p.random(p.width / 512, p.width / 256);
+        this.size = p.width / 128;
+        this.fill = fill;
+        this.stroke = stroke;
         this.rotationAngle = 0;
         this.rotationDirection = Math.random() > 0.5 ? 'clockwise' : 'anti-clockwise';
-        this.canRotate = Math.random() > 0.5;
+        this.innerPentagons = [];
     }
 
     update () {
@@ -32,15 +29,19 @@ export default class Pentagon {
     }
 
     draw () {
-        const angle = 360 / 5;
         this.p.fill(this.fill);
         this.p.stroke(this.stroke);
+        this.p.strokeWeight(this.p.width / 128);
+        this.p.push();
+        // this.p.translate(translateX, translateY);
+        this.p.rotate(this.rotationAngle);
         this.p.beginShape();
-        for (let a = 0; a < 360; a += angle) {
-            let sx = this.x + this.p.cos(a) * this.radius;
-            let sy = this.y + this.p.sin(a) * this.radius;
+        for (let a = 0; a < 360; a += (360 / 5)) {
+            let sx = this.x + this.p.cos(a) * this.size;
+            let sy = this.y + this.p.sin(a) * this.size;
             this.p.vertex(sx, sy);
         }
         this.p.endShape(this.p.CLOSE);
+        this.p.pop();
     }
 }
