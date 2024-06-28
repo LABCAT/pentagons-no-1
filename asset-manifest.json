@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b7c401a1.chunk.css",
+    "main.js": "/static/js/main.49554b67.chunk.js",
+    "main.js.map": "/static/js/main.49554b67.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.cd17dab2.js",
+    "runtime-main.js.map": "/static/js/runtime-main.cd17dab2.js.map",
+    "static/js/2.f412e828.chunk.js": "/static/js/2.f412e828.chunk.js",
+    "static/js/2.f412e828.chunk.js.map": "/static/js/2.f412e828.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.b7c401a1.chunk.css.map": "/static/css/main.b7c401a1.chunk.css.map",
+    "static/js/2.f412e828.chunk.js.LICENSE.txt": "/static/js/2.f412e828.chunk.js.LICENSE.txt",
+    "static/media/pentagons-no-1.4d62366c.mid": "/static/media/pentagons-no-1.4d62366c.mid",
+    "static/media/pentagons-no-1.c8cc49f5.ogg": "/static/media/pentagons-no-1.c8cc49f5.ogg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cd17dab2.js",
+    "static/js/2.f412e828.chunk.js",
+    "static/css/main.b7c401a1.chunk.css",
+    "static/js/main.49554b67.chunk.js"
+  ]
+}
